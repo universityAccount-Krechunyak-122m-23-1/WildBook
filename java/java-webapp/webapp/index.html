@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Test</h1>
+	Handle:
+	<form action="test">
+		<input type="text" name="user" value="<script>alert('Hi')</script>" />
+		<input type="submit" />
+	</form>
+	<br />
+	<p>
+		<a href="add_ticket">Add ticket</a>
+	</p>
+	<p>
+		<a href="add_handler">Add handler</a>
+	</p>
+	Handle:
+	<form action="handle">
+		<input type="text" name="handler" value="1" /> <input type="submit" />
+	</form>
+	<br /> Tickets by handler:
+	<form action="tickets_by_handler">
+		<input type="text" name="handler" value="1" /> <input type="submit" />
+	</form>
+	<br /> Tickets by status:
+	<form action="tickets_by_status">
+		<input type="text" name="status" value="NEW" /> <input type="submit" />
+	</form>
+	<hr />
+	<p>
+		<a href="handlers">Handlers</a>
+	</p>
+	<p>
+		<a href="print">Print</a>
+	</p>
+</body>
+</html>

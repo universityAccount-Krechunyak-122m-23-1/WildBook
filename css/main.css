@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+ul, ol {
+    list-style-type: none;
+}
+  
+a {
+    text-decoration: none;
+}
+
+.header__title {
+    text-transform: uppercase;
+    font-family: "PT Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: white;
+    padding-left: 5px;
+}
+
+.container {
+    max-width: 1080px;
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.fixed {
+    width: 100%;
+    height: 45px;
+    background-color: #262626;
+    position: fixed;
+    z-index: 999999;
+}
+  
+body {
+    position: relative;
+    overflow: hidden;
+}
+  
+h1 {
+    font-size: 30px;
+    font-family: "Playfair Display", serif;
+}
+
+.header {
+    width: 100%;
+    background-color: #DE3242;
+    z-index: 999;
+    padding-top: 60px;
+}
+  
+.header__main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+  
+.header__img {
+    padding-left: 45px;
+}
+  
+.header__span {
+    color: white;
+    font-weight: normal;
+    font-style: italic;
+}
+  
+.header__span_style {
+    color: #D52A3A;
+    font-weight: 600;
+}
+  
+.header__link {
+    color: #121212;
+}
+  
+.menu__list {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+  
+.menu__extra {
+    display: flex;
+}
+  
+.menu__item {
+    padding-right: 30px;
+}
+  
+.menu__link {
+    font-family: "Open Sans", sans-serif;
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    position: relative;
+}
+  
+.menu__link:hover .menu__label:before {
+    left: 0;
+}
+  
+.menu__link_style {
+    font-family: "PT Sans", sans-serif;
+    font-weight: 600;
+    background-color: #121212;
+    border: 2px solid #121212;
+    padding: 1em 3em;
+    font-size: 14px;
+    color: white;
+    text-transform: uppercase;
+    transition: .1s linear;
+    transition-property: background-color, color;
+    outline: none;
+    letter-spacing: .5px;
+    box-shadow: 0px 3px 5px 0px #121212;
+}
+  
+.menu__link_style:hover {
+    background-color: transparent;
+    color: #121212;
+}
+  
+.menu__label {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    overflow: hidden;
+    position: absolute;
+    cursor: pointer;
+}
+  
+.menu__label:before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: -100%;
+    bottom: 0;
+    border-bottom: 1px solid white;
+    transition: .2s linear;
+}
+  
+.menu__icon {
+    font-size: 23px;
+    padding-left: 15px;
+    color: #121212;
+    position: relative;
+}
+  
+.menu__icon_style {
+    opacity: .5;
+}
+  
+.menu__span {
+    position: absolute;
+    top: -15px;
+    width: 18.5px;
+    height: 15px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+    text-align: center;
+    color: #121212;
+    background-color: white;
+    position: absolute;
+}
+
+.section1 {
+    background-color: #DE3242;
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.section1__h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    line-height: 1;
+    color: #D52A3A;
+    text-align: center;
+    font-size: 195px;
+    user-select: none;
+    padding-top: 120px;
+    position: absolute;
+    z-index: 5;
+}
+
+.section1__span {
+    font-style: italic;
+}
+  
+.section1__img {
+    filter: drop-shadow(0px 10px 0px rgba(0, 0, 0, 0.1));
+    position: absolute;
+}
+
+.section1__img_style_second {
+    width: 17%;
+    left: 0;
+    bottom: 0;
+}
+
+.section1__img_style_fourth {
+    width: 18%;
+    right: 0;
+    z-index: 20;
+    bottom: -25px;
+}
+
+.section1__image {
+    width: 100%;
+}
+
+.section1__main {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+}
+
+.section1__book {
+    min-width: 310px;
+    max-width: 310px;
+    height: 450px;
+    position: relative;
+    z-index: 10;
+    transition: all .3s linear;
+}
+
+.section1__pic {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 3px 5px 0px #121212;
+}
+
+.section1__form {
+    max-width: 45%;
+    width: 100%;
+    z-index: 10;
+}
+  
+.section1__title {
+    font-size: 25px;
+    font-weight: normal;
+    font-family: "PT Sans", sans-serif;
+}
+
+.section1__inputs {
+    width: 100%;
+    padding-top: 20px;
+}
+
+.section1__inputs_style {
+    display: flex;
+    flex-direction: column;
+}
+  
+.section1__label {
+    padding-bottom: 10px;
+    font-size: 16.5px;
+    letter-spacing: .3px;
+    font-family: "PT Sans", sans-serif;
+}
+
+.section1__input {
+    outline: none;
+    background-color: white;
+    padding: 19.5px 15px 19.5px 15px;
+    box-shadow: 0px 3px 5px 0px #121212;
+    width: 100%;
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: border .1s linear;
+}
+  
+.section1__input::placeholder {
+    color: #121212;
+}
+  
+.section1__input:hover {
+    border: 1px solid #121212;
+}
+  
+.section1__input:focus {
+    cursor: text;
+}
+  
+.section1__select {
+    padding: 10px 5px 10px 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 1px solid white;
+    transition: border .1s linear;
+    box-shadow: 0px 3px 5px 0px #121212;
+    outline: none;
+    font-family: "PT Sans", sans-serif;
+}
+
+.section1__select:hover {
+    border: 1px solid #121212;
+}
+
+.section1__btn {
+    padding-top: 20px;
+    position: relative;
+}
+  
+.section1__button {
+    outline: none;
+    border: 2px solid #121212;
+    background-color: #121212;
+    box-shadow: 0px 3px 5px 0px #121212;
+    font-size: 14.5px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-family: "PT Sans", sans-serif;
+    text-transform: uppercase;
+    padding: 15px 14.5px 15px 14.5px;
+    transition: .1s linear;
+    transition-property: background-color, color;
+}
+  
+.section1__button:hover {
+    background-color: transparent;
+    color: #121212;
+}
+
+.footer {
+    background-color: #DE3242;
+}
+  
+.footer__main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 30px 0 10px 0;
+}
+
+.footer__rights {
+    padding-top: 20px;
+    font-family: "PT Sans", sans-serif;
+    font-size: 14px;
+}

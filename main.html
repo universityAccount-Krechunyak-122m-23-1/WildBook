@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildBook</title>
+    <link rel="icon" href="./img/WildBook.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+    <div class="fixed"></div>
+    <header class="header">
+        <div class="container">
+            <div class="header__main">
+                <div class="header__logotype">
+                    <a href="./main.html" class="header__link">
+                        <h1>Wild<span class="header__span">Book</span></h1>
+                        <p class="header__title">Ваша улюблена бібліотека!</p>
+                    </a>
+                </div>
+                <nav class="menu">
+                    <ul class="menu__list">
+                        <div class="menu__extra">
+                            <li class="menu__item"><a href="" class="menu__link">Головна<label class="menu__label"></label></a></li>
+                            <li class="menu__item"><a href="" class="menu__link">Новини<label class="menu__label"></label></a></li>
+                            <li class="menu__item"><a href="" class="menu__link">Підтримка<label class="menu__label"></label></a></li>
+                        </div>
+                        <li class="menu__item menu__item_profileBlock">
+                            <a href="" class="menu__link menu__link_style">Особистий кабінет</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <div class="section1">
+        <div class="container">
+            <h2 class="section1__h2">Wild<span class="section1__span">Book</span></h2>
+            <div class="section1__img section1__img_style_second">
+                <img src="./img/Main-images/section1/girl and book.jpeg" alt="Фото" class="section1__image">
+            </div>
+            <div class="section1__img section1__img_style_fourth">
+                <img src="./img/Main-images/section1/cat and book.jfif" alt="Фото" class="section1__image">
+            </div>
+            <div class="section1__main">
+                <div class="section1__book">
+                    <img src="./img/books/Ickagod.jpeg" alt="Книжка" class="section1__pic" id="selectedBook">
+                </div>
+                <form class="section1__form" action="" id="form">
+                    <h2 class="section1__title">Електронна черга для попереднього отримання нової книжки</h2>
+                    <div class="section1__inputs">
+                        <input type="text" class="section1__input" placeholder="Ваше імʼя*" required maxlength="100" name="name" id="inputName">
+                    </div>
+                    <div class="section1__inputs">
+                        <input type="tel" class="section1__input" placeholder="Ваш номер телефону*" required name="telephone" id="inputNumber">
+                    </div>
+                    <div class="section1__inputs">
+                        <input type="email" class="section1__input" placeholder="Ваша пошта*" required maxlength="100" name="email" id="inputEmail">
+                    </div>
+                    <div class="section1__inputs section1__inputs_style">
+                        <label for="selectList" class="section1__label">Оберіть книжку:</label>
+                        <select class="section1__select" required id="selectList" name="select"></select>
+                    </div>
+                    <div class="section1__btn">
+                        <button type="submit" class="section1__button" id="regQueue">Встати в чергу</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__main">
+                <p class="footer__rights">WildBook © 2022. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/booksData.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

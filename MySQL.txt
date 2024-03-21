@@ -1,0 +1,74 @@
+DROP DATABASE IF EXISTS WildBook;
+CREATE DATABASE WildBook;
+	USE WildBook;
+
+DROP TABLE IF EXISTS Clients;
+CREATE TABLE Clients
+(
+	id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(400) NOT NULL,
+    phone_number VARCHAR(20) NOT NULL,
+    email VARCHAR(400) NOT NULL,
+    CONSTRAINT pk_clients PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Tickets;
+CREATE TABLE Tickets
+(
+	id INTEGER NOT NULL AUTO_INCREMENT,
+    name VARCHAR(400) NOT NULL,
+    client_phone_number VARCHAR(400),
+    status VARCHAR(20) NOT NULL,
+    CONSTRAINT pk_tickets PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Operators;
+CREATE TABLE Operators
+(
+	id INTEGER AUTO_INCREMENT,
+    name VARCHAR(400),
+    is_Available BOOLEAN,
+    CONSTRAINT pk_operators PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS Operators_Reports;
+CREATE TABLE Operators_Reports
+(
+	ticket_id INTEGER NOT NULL,
+    operator_id INTEGER NULL,
+    is_Active_Ticket BOOLEAN NOT NULL DEFAULT FALSE,
+    comment VARCHAR(2000) NULL 
+);
+
+ALTER TABLE Operators_Reports ADD CONSTRAINT pk_operators_reports_id PRIMARY KEY (ticket_id, operator_id);
+ALTER TABLE Operators_Reports ADD CONSTRAINT fk_ticket_id FOREIGN KEY (ticket_id) REFERENCES Tickets(ticket_id);
+ALTER TABLE Operators_Reports ADD CONSTRAINT fk_operator_id FOREIGN KEY (operator_id) REFERENCES Operators(operator_id);
+
+INSERT INTO Clients (name, phone_number, email) 
+VALUES ("Альберт", "+380668761542", "AlbertEmailExample@gmail.com"),
+	("Жанна", "+380988765744", "JannaEmailExample@gmail.com"),
+	("Ентоні", "+380972366124", "AntonyEmailExample@gmail.com");
+    
+INSERT INTO Tickets (name, client_phone_number, status)
+VALUES ("Гормони щастя", "+380668761542", 'Вирішен'),
+		("Ловці неба", "+380988765744", 'В процесі'),
+		("Дім на краю ночі", "+380972366124", 'Очікування');
+        
+INSERT INTO Operators (name, is_Available)
+VALUES ("Дмитро", true),
+		("Ольга", true),
+		("Антон", false),
+        ("Вікторія", false),
+        ("Тетяна", true);
+        
+INSERT INTO Operators_Reports (ticket_id, operator_id, is_Active_Ticket, comment)
+VALUES (1, 1, false, 'Книжка була успішно отримана клієнтом'),
+		(2, 4, true, 'Очікуємо на клієнта аби він отримав свою книжку'),
+		(3, 3, true, NULL);
+
+SELECT name, status FROM Tickets
+	ORDER BY id DESC
+
+SELECT name, CASE is_Available WHEN false THEN "Not available" WHEN true THEN "Available" END AS Availability FROM Operators O;
+
+SELECT C.name, C.phone_number, C.email FROM Clients C WHERE C.phone_number = '+380988765744';
